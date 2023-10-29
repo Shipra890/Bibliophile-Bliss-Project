@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>About Us - Bibliophile Bliss</title>
+  <style media="screen">
+    .footer {
+      position: fixed;
+    }
+
+    body {
+      background-color: #f7f7f7;
+    }
+  </style>
+</head>
+
+<body>
+  {% if request.user.is_authenticated %}
+    {% include "store/customer_navbar.html" %}
+  {% else %}
+    {% include "store/navbar.html" %}
+  {% endif %}
+  <br><br><br>
+
+  <div style="text-align: center;">
+    <h1>About Bibliophile Bliss</h1>
+    <p>Welcome to Bibliophile Bliss, your gateway to a world of literary adventures!</p>
+    <p>Developed by a team of passionate bookworms, Bibliophile Bliss is your go-to platform for discovering, purchasing, and enjoying your favorite books with ease. Our team of dedicated developers and book enthusiasts has created this app to cater to your reading needs, making it simple and convenient to indulge in the joy of reading.</p>
+
+    <h2>Meet Our Team</h2>
+    <ul>
+      <p>Shipra Islam Shanila<br>
+      <p>Abrar Galib<br>
+      <p>Marjan Khanom<br>
+    </ul>
+
+    <p>We are a group of students pursuing our third year of studies in the Computer Science and Engineering (CSE) program at the University of Asia Pacific. Our passion for both technology and books has driven us to create Bibliophile Bliss.</p>
+
+    <h2>Key Features</h2>
+    <p>At Bibliophile Bliss, we offer a range of features to enhance your reading experience:</p>
+    <ul>
+      <p>Seamless book purchasing with secure payment options<br>
+      <p>Order tracking to keep you updated on the status of your orders<br>
+      <p>Easy download of invoices for your records<br>
+    </ul>
+
+    <p>Join us on this literary journey, and let us help you discover your next favorite book!</p>
+  </div>
+
+  {% include "store/footer.html" %}
+</body>
+
+</html>
